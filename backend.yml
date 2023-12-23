@@ -1,4 +1,4 @@
-- name: Expense Frontend Setup
+- name: Expense Backend Setup
   hosts: all
   become: yes
   tasks:
@@ -12,7 +12,7 @@
         state: present
     - name: Copy Backend Service File
       ansible.builtin.copy:
-        src: Backend.service
+        src: backend.service
         dest: /etc/systemd/system/backend.service
     - name: Add application User
       ansible.builtin.user:
