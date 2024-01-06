@@ -49,9 +49,9 @@ filebeat.inputs:
 
     # Optional additional fields. These fields can be freely picked
     # to add additional information to the crawled log files for filtering
-    fields:
-      component: {{ component }}
-
+    #fields:
+      # level: debug
+      # review: 1
 
 # ============================== Filebeat modules ==============================
 
@@ -139,18 +139,18 @@ setup.kibana:
 #  # Array of hosts to connect to.
 #  hosts: ["localhost:9200"]
 
-  # Protocol - either `http` (default) or `https`.
-  #protocol: "https"
+# Protocol - either `http` (default) or `https`.
+#protocol: "https"
 
-  # Authentication credentials - either API key or username/password.
-  #api_key: "id:api_key"
-  #username: "elastic"
-  #password: "changeme"
+# Authentication credentials - either API key or username/password.
+#api_key: "id:api_key"
+#username: "elastic"
+#password: "changeme"
 
 # ------------------------------ Logstash Output -------------------------------
 output.logstash:
   # The Logstash hosts
-  hosts: ["172.31.25.94:5044"]
+  hosts: ["172.31.86.223:5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
@@ -229,5 +229,6 @@ processors:
 
 # This allows to enable 6.7 migration aliases
 #migration.6_to_7.enabled: true
+
 
 
